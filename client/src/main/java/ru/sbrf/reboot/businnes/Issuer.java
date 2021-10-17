@@ -1,4 +1,4 @@
-package ru.sbrf.reboot;
+package ru.sbrf.reboot.businnes;
 
 public enum Issuer {
 

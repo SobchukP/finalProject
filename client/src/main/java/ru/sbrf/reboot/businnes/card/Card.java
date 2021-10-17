@@ -1,7 +1,7 @@
-package ru.sbrf.reboot.card;
+package ru.sbrf.reboot.businnes.card;
 
 import lombok.Data;
-import ru.sbrf.reboot.Issuer;
+import ru.sbrf.reboot.businnes.Issuer;
 
 @Data
 public class Card {

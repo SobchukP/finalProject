@@ -7,13 +7,26 @@
         <groupId>ru.sbrf.reboot</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
     <artifactId>server</artifactId>
 
-    <properties>
-        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>
-    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <artifactId>common</artifactId>
+            <groupId>ru.sbrf.reboot</groupId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

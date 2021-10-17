@@ -1,9 +1,8 @@
-package ru.sbrf.reboot.card;
+package ru.sbrf.reboot.businnes.card;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.sbrf.reboot.Issuer;
-import ru.sbrf.reboot.card.Card;
+import ru.sbrf.reboot.businnes.Issuer;
 
 public class CardTest {
 
