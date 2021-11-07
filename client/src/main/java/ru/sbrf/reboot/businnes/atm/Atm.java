@@ -1,23 +1,13 @@
 package ru.sbrf.reboot.businnes.atm;
 
-import lombok.Data;
 import ru.sbrf.reboot.businnes.card.Card;
-import ru.sbrf.reboot.businnes.Issuer;
 
-@Data
-public class Atm {
-    private Issuer issuer;
+import java.math.BigDecimal;
 
-    public Atm(Issuer issuer) {
-        this.issuer = issuer;
-    }
+public interface Atm {
 
-    public AtmService acceptCard(String passCodeCard, Card card) throws IllegalAccessException {
-        int counter = 0;
-        while (!passCodeCard.equals(card.getPassCode())){
-            counter++;
-            if (counter > 2) throw new IllegalAccessException("Pass Code incorrect");
-        }
-        return new AtmService(card);
-    }
+    BigDecimal getBalance(Card card) throws IllegalAccessException;
+
+    boolean isAuthorized(String pin, Card card);
+
 }

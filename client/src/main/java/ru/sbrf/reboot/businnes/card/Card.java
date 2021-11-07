@@ -1,18 +1,17 @@
 package ru.sbrf.reboot.businnes.card;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import ru.sbrf.reboot.businnes.Issuer;
 
 @Data
+@AllArgsConstructor
+@Builder
 public class Card {
 
     private String cardNumber;
-    private String passCode;
+    private String pin;
     private Issuer issuer;
 
-    public Card(String cardNumber, String passCode, Issuer issuer) {
-        this.cardNumber = cardNumber;
-        this.passCode = passCode;
-        this.issuer = issuer;
-    }
 }

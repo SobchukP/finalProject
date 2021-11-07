@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS Accounts;
+
+CREATE TABLE Accounts (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  card VARCHAR(20) NOT NULL,
+  pin VARCHAR(4) NOT NULL,
+  balance int DEFAULT 0
+);
+
+INSERT INTO Accounts (card, pin, balance) VALUES
+  ('1111 1111 1111 1111', '1001', 1000),
+  ('2222 2222 2222 2222', '1002', 2000),
+  ('3333 3333 3333 3333', '1003', 3000);

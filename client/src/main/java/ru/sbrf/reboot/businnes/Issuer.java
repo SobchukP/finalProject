@@ -2,7 +2,7 @@ package ru.sbrf.reboot.businnes;
 
 public enum Issuer {
 
-    SBRF,
-    VTB,
-    TINKOFF
+    BANK_ONE,
+    BANK_TWO,
+    BANK_THREE
 }

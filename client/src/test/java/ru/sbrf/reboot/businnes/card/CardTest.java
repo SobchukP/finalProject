@@ -8,8 +8,8 @@ public class CardTest {
 
     @Test
     public void getPassCode(){
-        Card card = new Card("1111 2222 3333 4444", "0000", Issuer.SBRF);
+        Card card = new Card("1111 2222 3333 4444", "0000", Issuer.BANK_ONE);
 
-        Assertions.assertEquals("0000", card.getPassCode());
+        Assertions.assertEquals("0000", card.getPin());
     }
 }

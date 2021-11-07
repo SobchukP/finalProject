@@ -1,16 +1,14 @@
 package ru.sbrf.reboot;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Request {
-
+@AllArgsConstructor
+public class RequestAuthorizedStatus {
     private String cardNumber;
-
-    public Request (String cardNumber){
-        this.cardNumber = cardNumber;
-    }
+    private String pin;
 
 }
