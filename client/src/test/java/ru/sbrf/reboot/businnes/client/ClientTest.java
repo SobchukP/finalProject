@@ -10,8 +10,8 @@ public class ClientTest {
     @Test
     public void getCard(){
 
-        Card card = new Card("1111 2222 3333 4444", "0000", Issuer.SBRF);
-        Client client = new Client(card, "0000");
+        Card card = new Card("1111 2222 3333 4444", "0000", Issuer.BANK_ONE);
+        Client client = new Client(card, "Name","0000");
 
         Assertions.assertTrue(client.getCard().equals(card));
     }
@@ -19,10 +19,10 @@ public class ClientTest {
     @Test
     public void getPassCodeInMemory(){
 
-        Card card = new Card("1111 2222 3333 4444", "0000", Issuer.SBRF);
-        Client client = new Client(card, "0000");
+        Card card = new Card("1111 2222 3333 4444", "0000", Issuer.BANK_ONE);
+        Client client = new Client(card, "Name","0000");
 
-        Assertions.assertEquals("0000", client.getPassCodeInMemory());
+        Assertions.assertEquals("0000", client.getPin());
     }
 
 

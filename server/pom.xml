@@ -9,24 +9,27 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <packaging>jar</packaging>
     <artifactId>server</artifactId>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
     <dependencies>
         <dependency>
             <artifactId>common</artifactId>
             <groupId>ru.sbrf.reboot</groupId>
             <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
+
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.5</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

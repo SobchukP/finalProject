@@ -11,12 +11,12 @@ public class AtmTest {
 
     @Test
     public void acceptCard(){
-        Card card = new Card("1111 2222 3333 4444", "1001", Issuer.SBRF);
-        Client client = new Client(card, "1001");
-        Atm atm = new Atm(Issuer.SBRF);
+        Card card = new Card("1111 2222 3333 4444", "1001", Issuer.BANK_ONE);
+        Client client = new Client(card, "Name", "1001");
+        AtmImpl atm = new AtmImpl(Issuer.BANK_ONE);
 
         Assertions.assertThrows(IllegalAccessException.class, () -> {
-            atm.acceptCard("1002",card);
+            atm.isAuthorized("1002",card);
         });
     }
 }

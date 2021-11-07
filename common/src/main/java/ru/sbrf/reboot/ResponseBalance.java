@@ -7,11 +7,12 @@ import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
-public class Response {
+
+public class ResponseBalance {
 
     private BigDecimal balance;
 
-    public Response(BigDecimal balance){
+    public ResponseBalance(BigDecimal balance){
         this.balance = balance;
     }
 }
